@@ -35,6 +35,15 @@ public class BallPane extends Pane{
 	public void decreaseSpeed(){
 		animation.setRate(animation.getRate()>0?animation.getRate()-0.1:0);
 	}
+	//create the method that can change the color
+	public static void changeColor(){
+		Paint[] color = {Color.GREEN,Color.YELLOW,Color.GRAY,Color.BLUE,Color.PURPLE}; 
+		
+		SecureRandom srand = new SecureRandom();
+		int num = srand.nextInt(5);
+		for(int i=0;i<3;i++)
+			circle[i].setFill(color[num]);
+	}
 	public DoubleProperty rateProerty(){
 		return animation.rateProperty();
 	}
