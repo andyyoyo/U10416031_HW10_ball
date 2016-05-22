@@ -17,6 +17,9 @@ public class BounceBallContral extends Application{
 			else if(e.getCode()==KeyCode.DOWN){
 				ballPane.decreaseSpeed();
 			}
+			//press the Q button to change the color
+			else if(e.getCode()==KeyCode.Q){
+				BallPane.changeColor();
 		});
 		
 		Scene scene = new Scene(ballPane,250,150);
