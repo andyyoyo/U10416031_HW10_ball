@@ -22,7 +22,7 @@ public class BounceBallContral extends Application{
 				BallPane.changeColor();
 		});
 		
-		Scene scene = new Scene(ballPane,250,150);
+		Scene scene = new Scene(ballPane,500,500);
 		primaryStage.setTitle("BounceBallControl");
 		primaryStage.setScene(scene);
 		primaryStage.show();
