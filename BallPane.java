@@ -24,8 +24,8 @@ public class BallPane extends Pane{
 		animation.play();
 		
 	}
-		public void play(){
-			animation.play();
+	public void play(){
+		animation.play();
 	}
 	public void pause(){
 		animation.pause();
@@ -50,18 +50,21 @@ public class BallPane extends Pane{
 		return animation.rateProperty();
 	}
 	protected void moveBall(){
-		if(x<radius||x > getWidth()-radius){
-			dx *=-1;
-		}
-		if(y<radius||y>getHeight()-radius){
-			dy *= -1;
-		}
 		
-			x += dx;
-			y += dy;
-			circle.setCenterX(x);
-			circle.setCenterY(y);
+		//set the moving of the balls
+		for(int i=0;i<3;i++){
+			if(x[i]<radius||x[i] > getWidth()-radius){
+				dx[i] *=-1;
+			}
+			if(y[i]<radius||y[i]>getHeight()-radius){
+				dy[i] *= -1;
+			}
 		
+				x[i] += dx[i];
+				y[i] += dy[i];
+				circle[i].setCenterX(x[i]);
+				circle[i].setCenterY(y[i]);
+		}
 	}
 	
 }
