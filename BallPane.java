@@ -8,10 +8,12 @@ import javafx.animation.KeyFrame;
 
 public class BallPane extends Pane{
 	
-	public final double radius = 20;
-	private double x = radius, y = radius;
-	private double dx = 1,dy = 1;
-	private Circle circle = new Circle(x,y,radius);
+	public final static double radius = 15;
+	private static double[] x = {radius,radius*9,radius*20};
+	private static double[] y = {radius*6,radius*15,radius*30};
+	private double[] dx = {1,1,2};
+	private double[] dy = {1,1,1};
+	private static Circle[] circle = {new Circle(x[0],y[0],radius),new Circle(x[1],y[1],radius*2),new Circle(x[2],y[2],radius*3)};
 	private Timeline animation;
 	
 	public BallPane(){
